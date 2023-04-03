@@ -42,7 +42,7 @@ def delete_preset(preset_name):
 
 
 st.set_page_config(page_title="Presets | Yellow Door Studio", page_icon="yellow_door_favicon.png", layout="centered",
-                   initial_sidebar_state="auto", menu_items=None)
+                   initial_sidebar_state="expanded")
 
 st.image('Yellow Door Studio.webp', width=250)
 st.header('Manage Presets')
