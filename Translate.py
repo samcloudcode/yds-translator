@@ -83,7 +83,7 @@ def update_model_response():
 
 # Initiate states and variables
 st.set_page_config(page_title="Translate | Yellow Door Studio", page_icon="yellow_door_favicon.png", layout="centered",
-                   initial_sidebar_state="expanded")
+                   initial_sidebar_state="auto")
 
 ss = st.session_state
 initiate_states()
