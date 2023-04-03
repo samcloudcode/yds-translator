@@ -121,22 +121,11 @@ if ss.model_reply == "":
 else:
     model_response_display = st.text_area('Translation:', value=ss.model_reply)
 
-col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.button('Translate', on_click=translate, type='primary')
+st.button('Translate', on_click=translate, type='primary')
 
-with col2:
-    if st.button('Clear'):
-        ss.model_reply = ""
-        ss.text_to_translate = ""
-        st.experimental_rerun()
+if st.button('Clear'):
+    ss.model_reply = ""
+    ss.text_to_translate = ""
+    st.experimental_rerun()
 
-with col3:
-    if st.button('Copy translation'):
-        try:
-            pyperclip.copy(model_response_display)
-            st.write("Copied to clipboard")
-
-        except:
-            st.write('Cannot copy')
